@@ -2,12 +2,12 @@
     
     <div class="card" style="width: 18rem;">
       <div class="card-body">
-        <h5 class="card-title"><?= $data['mhs']['nama']; ?></h5>
-        <h6 class="card-subtitle mb-2 text-muted"><?= $data['mhs']['nrp']; ?></h6>
-        <p class="card-text"><?= $data['mhs']['email']; ?></p>
-        <p class="card-text"><?= $data['mhs']['email']; ?></p>
-        <p class="card-text"><?= $data['mhs']['jurusan']; ?></p>
-        <a href="<?= BASEURL; ?>/mahasiswa" class="card-link">Kembali</a>
+        <h5 class="card-title"><?= $data['event']['title']; ?></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><?= $data['event']['deskripsi']; ?></h6>
+        <p class="card-text"><?= $data['event']['venue']; ?></p>
+        <p class="card-text"><?= $data['event']['number_of_participants']; ?></p>
+        <p class="card-text"><?= $data['event']['title']; ?></p>
+        <a href="<?= BASEURL; ?>/event" class="card-link">Kembali</a>
       </div>
     </div>
 

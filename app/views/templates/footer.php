@@ -1,4 +1,6 @@
-<footer class="bg-dark text-white text-center py-3">
+  
+  </div>
+  <footer class="footer bg-light text-dark text-center py-3">
     <div class="container">
       <p>&copy; 2023 Event Management. All rights reserved.</p>
     </div>

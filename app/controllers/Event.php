@@ -13,7 +13,7 @@ class Event extends Controller {
     public function detail($id)
     {
         $data['judul'] = 'Detail Event';
-        $data['evet'] = $this->model('Event_model')->getEventById($id);
+        $data['event'] = $this->model('Event_model')->getEventById($id);
         $this->view('templates/header', $data);
         $this->view('event/detail', $data);
         $this->view('templates/footer');

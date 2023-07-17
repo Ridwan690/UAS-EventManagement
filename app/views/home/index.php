@@ -10,7 +10,7 @@
   <!-- Event Section -->
   <section class="events py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Upcoming Events</h2>
+      <h2 class="text-center mb-4">Latest Events</h2>
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card">

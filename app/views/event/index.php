@@ -35,7 +35,7 @@
               <li class="list-group-item">
                   <?= $event['title']; ?>
                   <a href="<?= BASEURL; ?>/event/hapus/<?= $event['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('yakin?');">hapus</a>
-                  <a href="<?= BASEURL; ?>/event/ubah/<?= $event['id']; ?>" class="badge badge-success float-right tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $event['id']; ?>">ubah</a>
+                  <a href="<?= BASEURL; ?>/event/ubah/<?= $event['id']; ?>" class="badge badge-success float-right tampilModalUbahEvent" data-toggle="modal" data-target="#formModal" data-id="<?= $event['id']; ?>">ubah</a>
                   <a href="<?= BASEURL; ?>/event/detail/<?= $event['id']; ?>" class="badge badge-primary float-right">detail</a>
               </li>
             <?php endforeach; ?>
@@ -90,11 +90,11 @@
             <input type="number" class="form-control" id="number_of_participants" name="number_of_participants" autocomplete="off">
           </div>
           
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="images">Images</label>
             <input type="file" class="form-control-file" id="images" name="images[]" multiple>
           </div>
-          <div class="image-preview"></div>
+          <div class="image-preview"></div> -->
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

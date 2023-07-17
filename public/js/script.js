@@ -14,7 +14,7 @@ $(function() {
     });
 
 
-    $('.tampilModalUbah').on('click', function() {
+    $('.tampilModalUbahEvent').on('click', function() {
         
         $('#formModalLabel').html('Ubah Data Event');
         $('.modal-footer button[type=submit]').html('Ubah Data');

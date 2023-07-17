@@ -1,6 +1,6 @@
 <?php 
 
-define('BASEURL', 'http://localhost/code/public');
+define('BASEURL', 'http://localhost/UAS-EventManagement/public');
 
 // DB
 define('DB_HOST', 'localhost');
