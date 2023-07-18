@@ -3,6 +3,7 @@
 class Dashboard extends Controller {
     public function index()
     {
+        
         $data['judul'] = 'Home';
         $data['users'] = $this->model('Dashboard_model')->getCountUsers();
         $data['event'] = $this->model('Dashboard_model')->getCountEvent();

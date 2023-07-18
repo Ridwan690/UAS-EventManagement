@@ -53,9 +53,9 @@
                         <td><?= $event['time']; ?></td>
                         <td>
                         <div class="btn-group">
-                            <a href="<?= BASEURL; ?>/event/detail/<?= $event['id']; ?>" class="btn btn-primary float-right"><i class="fa fa-eye"></i></a>
-                            <a href="<?= BASEURL; ?>/event/ubah/<?= $event['id']; ?>" class="btn btn-success float-right tampilModalUbahEvent" data-toggle="modal" data-target="#formModal" data-id="<?= $event['id']; ?>"><i class="fa fa-pen"></i></a>
-                            <a href="<?= BASEURL; ?>/event/hapus/<?= $event['id']; ?>" class="btn btn-danger float-right" onclick="return confirm('yakin?');"><i class="fa fa-trash"></i></a>
+                            <a href="<?= BASEURL; ?>/DashboardEvent/detail/<?= $event['id']; ?>" class="btn btn-primary float-right"><i class="fa fa-eye"></i></a>
+                            <a href="<?= BASEURL; ?>/DashboardEvent/edit/<?= $event['id']; ?>" class="btn btn-success float-right" ><i class="fa fa-pen"></i></a>
+                            <a href="<?= BASEURL; ?>/DashboardEvent/hapus/<?= $event['id']; ?>" class="btn btn-danger float-right" onclick="return confirm('yakin?');"><i class="fa fa-trash"></i></a>
                         </div>
                         </td>
                         </tr>

@@ -1,6 +1,6 @@
 <?php 
 
-class DashboardEvent extends Controller {
+class DashboardUser extends Controller {
 
     public function index()
     {
@@ -8,7 +8,7 @@ class DashboardEvent extends Controller {
         $data['event'] = $this->model('Dashboard_event_model')->getAllEvent();
         $this->view('template-admin/header', $data);
         $this->view('template-admin/sidebar', $data);
-        $this->view('dashboard/event/index', $data);
+        $this->view('dashboard/user/index', $data);
         $this->view('template-admin/footer');
     }
 
@@ -28,14 +28,6 @@ class DashboardEvent extends Controller {
         $this->view('template-admin/header', $data);
         $this->view('template-admin/sidebar', $data);
         $this->view('dashboard/event/create', $data);
-        $this->view('template-admin/footer');
-    }
-    public function edit($id) {
-        $data['judul'] = 'Daftar Event';
-        $data['event'] = $this->model('Dashboard_event_model')->editEvent($id);
-        $this->view('template-admin/header', $data);
-        $this->view('template-admin/sidebar', $data);
-        $this->view('dashboard/event/edit', $data);
         $this->view('template-admin/footer');
     }
 

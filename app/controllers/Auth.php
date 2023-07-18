@@ -18,23 +18,27 @@ class Auth extends Controller {
             $email = $_POST['email'];
             $password = $_POST['password'];
             $data['login'] = $this->model('Auth_model')->getUser($email, $password);
-            if (session_status() == PHP_SESSION_NONE) {
+            
+            if ($data['login']['role'] == "ADMIN") {
+                // Login berhasil, setel variabel sesi untuk menandai bahwa pengguna telah login
                 session_start();
-                // Lakukan verifikasi login, misalnya dengan memeriksa hasil query.
-                if ($data['login']['role'] == "ADMIN") {
-                    // Login berhasil, arahkan pengguna ke halaman yang sesuai
-                    header('Location: ' . BASEURL . '/');
-                    exit();
-                }else {
-                    header('Location: ' . BASEURL . '/auth');
-                    exit();
-                }
+                $_SESSION['isLoggedIn'] = true;
+                
+                // Arahkan pengguna ke halaman yang sesuai
+                header('Location: ' . BASEURL . '/dashboard');
+                exit();
+            } else {
+                
+                header('Location: ' . BASEURL . '/');
+                exit();
             }
         } else {
-            // Tampilkan pesan error karena email dan/atau password tidak diset
+            header('Location: ' . BASEURL . '/auth');
+            exit();
             
         }
     }
+
 
     public function logout()
     {
@@ -43,8 +47,9 @@ class Auth extends Controller {
         // Destroy the session and unset session variables
         if (session_status() == PHP_SESSION_NONE){
             session_start();
-            session_destroy();
+            $_SESSION['isLoggedIn'] = false; // atau unset($_SESSION['isLoggedIn']);
             session_unset();
+            session_destroy();
         }
 
         // Redirect to the login page or any other desired page

@@ -1,6 +1,6 @@
 <?php 
 
-class Dashboard_event_model {
+class Dashboard_user_model {
     private $table = 'event';
     private $db;
 
@@ -16,13 +16,6 @@ class Dashboard_event_model {
     }
 
     public function getEventById($id)
-    {
-        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
-        $this->db->bind('id', $id);
-        return $this->db->single();
-    }
-
-    public function editEvent($id)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
         $this->db->bind('id', $id);
@@ -63,12 +56,10 @@ class Dashboard_event_model {
 
     public function ubahDataEvent($data)
     {
-        $query = "UPDATE event SET
+        $query = "UPDATE 'event' SET
                     title = :title,
                     deskripsi = :deskripsi,
                     venue = :venue,
-                    date = :date,
-                    time = :time,
                     number_of_participants = :number_of_participants
                   WHERE id = :id";
         
@@ -76,8 +67,6 @@ class Dashboard_event_model {
         $this->db->bind('title', $data['title']);
         $this->db->bind('deskripsi', $data['deskripsi']);
         $this->db->bind('venue', $data['venue']);
-        $this->db->bind('date', $data['date']);
-        $this->db->bind('time', $data['time']);
         $this->db->bind('number_of_participants', $data['number_of_participants']);
         $this->db->bind('id', $data['id']);
 
