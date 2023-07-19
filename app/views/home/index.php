@@ -1,8 +1,11 @@
 <!-- Hero Section -->
 <header class="hero bg-primary text-white text-center py-5">
     <div class="container">
-      <h1 class="display-4 ">SELAMAT DATANG DI EFG EVENT MANAGEMENT</h1>
-      <p class="lead">Ayo buat acara-acara yang berharga bagi anda menjadi acara yang lebih meriah dengan menggunakan jasa EFG Event Management.</p>
+      <h1 class="display-5 ">SELAMAT DATANG DI EFG EVENT MANAGEMENT</h1>
+      <div class="py-5">
+        <h5 class="lead"><strong>Mewujudkan Acara Impian Anda</strong></h5>
+        <p class="lead">Apakah Anda sedang merencanakan sebuah acara yang luar biasa? Kami di EFG Event Management siap membantu Anda mengatur dan mengorganisir acara yang tak terlupakan. Dengan pengalaman dan keahlian kami, kami akan menjadikan visi Anda menjadi kenyataan.</p>
+      </div>
       <a href="#" class="btn btn-light btn-lg">Ayo mulai daftarkan acara mu!</a>
     </div>
   </header>
