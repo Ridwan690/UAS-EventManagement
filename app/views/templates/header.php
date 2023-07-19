@@ -52,15 +52,10 @@ if (session_status() === PHP_SESSION_NONE) {
       max-height: 200px
     }
 
-    .card-img {
-      object-fit: cover;
+    .card-img-top {
       width: 100%;
-      height: 100%;
-    }
-
-    .equal-image-size {
-      height: 300px;
-      /* Tentukan ukuran tinggi gambar yang diinginkan */
+      height: 15vw;
+      object-fit: cover;
     }
   </style>
 </head>

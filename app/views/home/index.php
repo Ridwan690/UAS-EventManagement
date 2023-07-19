@@ -1,41 +1,44 @@
 <!-- Hero Section -->
 <header class="hero bg-primary text-white text-center py-5">
     <div class="container">
-      <h1 class="display-4">Welcome to Event Management</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget justo non ex hendrerit aliquet.</p>
-      <a href="#" class="btn btn-light btn-lg">Get Started</a>
+      <h1 class="display-4 ">SELAMAT DATANG DI EFG EVENT MANAGEMENT</h1>
+      <p class="lead">Ayo buat acara-acara yang berharga bagi anda menjadi acara yang lebih meriah dengan menggunakan jasa EFG Event Management.</p>
+      <a href="#" class="btn btn-light btn-lg">Ayo mulai daftarkan acara mu!</a>
     </div>
   </header>
 
   <!-- Event Section -->
   <section class="events py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Latest Events</h2>
+      <h2 class="text-center mb-4">Event Terbaru</h2>
       <div class="row">
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="Event 1">
+            <img src="<?= BASEURL; ?>/img/birthday.jpg" class="card-img-top" alt="Event 1">
             <div class="card-body">
-              <h5 class="card-title">Event 1</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h5 class="card-title">Birthday Party</h5>
+              <p class="card-text">Anda sedang ulang tahun ?</p>
+              <p class="card-text">EFG Event Management dapat membantu memeriahkan acara anda dengan dekorasi venue yang indah dan juga kami akan menambahkan beberapa mini games agar acara anda menjadi tidak membosankan.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="Event 2">
+            <img src="<?= BASEURL; ?>/img/wedding.jpg" class="card-img-top" alt="Event 2">
             <div class="card-body">
-              <h5 class="card-title">Event 2</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h5 class="card-title">Wedding Party</h5>
+              <p class="card-text">Kalian ingin acara pernikahan yang meriah ?</p>
+              <p class="card-text">EFG Event Management dapat menyusun rancangan pesta pernikahan anda. kami siap mendekor venue dan juga menyusun susunan acara,agar acara yang sakral ini menjadi moment yang dapat dikenang selamanya.</p>
             </div>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card">
-            <img src="https://via.placeholder.com/400" class="card-img-top" alt="Event 3">
+            <img src="<?= BASEURL; ?>/img/gathering.jpg" class="card-img-top" alt="Event 3">
             <div class="card-body">
-              <h5 class="card-title">Event 3</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h5 class="card-title">Community Gathering</h5>
+              <p class="card-text">Kalian ingin membuat acara komunitas?</p>
+              <p class="card-text">kalian bisa menggunakan jasa kami untuk mempersiapkan acara perkumpulan komunitas,kita bisa mendekorasi venue yang telah ada dan kami akan siapkan mini event agar acara kalian menjadi lebih asik.</p>
             </div>
           </div>
         </div>
