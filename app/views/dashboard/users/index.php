@@ -7,7 +7,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Event</li>
+              <li class="breadcrumb-item active">User</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -22,8 +22,8 @@
         <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h2 class="card-title">Daftar Event</h2>
-                <a href="<?= BASEURL; ?>/DashboardEvent/create" class="btn btn-primary float-right">Create Data</i></a>
+                <h2 class="card-title">Daftar User</h2>
+                <a href="<?= BASEURL; ?>/DashboardUser/create" class="btn btn-primary float-right">Create Data</i></a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -31,41 +31,27 @@
                   <thead>
                     <tr>
                       <th style="width: 10px">#</th>
-                      <th>Title</th>
-                      <th>Description</th>
-                      <th>Veneu</th>
-                      <th>Date</th>
-                      <th>Time</th>
-                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Role</th>
                       <th style="width: 40px">Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php 
                     $no = 1;
-                    foreach ( $data['event'] as $event ): 
+                    foreach ( $data['user'] as $user ): 
                     ?>
                         <tr>
                         <td><?php echo $no++; ?></td>
-                        <td><?= $event['title']; ?></td>
-                        <td><?= $event['deskripsi']; ?></td>
-                        <td><?= $event['venue']; ?></td>
-                        <td><?= $event['date']; ?></td>
-                        <td><?= $event['time']; ?></td>
-                          <?php if (!empty($event['images'])): ?>
-                            <td>
-                              <div class="image-gallery">
-                                <?php foreach ($event['images'] as $image): ?>
-                                  <img src="<?= BASEURL; ?>/images/<?= $image; ?>" alt="Event Image" style=" max-width:30px;">
-                                <?php endforeach; ?>
-                              </div>
-                            </td>
-                          <?php endif; ?>
+                        <td><?= $user['name']; ?></td>
+                        <td><?= $user['email']; ?></td>
+                        <td><?= $user['role']; ?></td>
                         <td>
                         <div class="btn-group">
-                            <a href="<?= BASEURL; ?>/DashboardEvent/detail/<?= $event['id']; ?>" class="btn btn-primary float-right"><i class="fa fa-eye"></i></a>
-                            <a href="<?= BASEURL; ?>/DashboardEvent/edit/<?= $event['id']; ?>" class="btn btn-success float-right" ><i class="fa fa-pen"></i></a>
-                            <a href="<?= BASEURL; ?>/DashboardEvent/hapus/<?= $event['id']; ?>" class="btn btn-danger float-right" onclick="return confirm('yakin?');"><i class="fa fa-trash"></i></a>
+                            <a href="<?= BASEURL; ?>/DashboardUser/detail/<?= $user['id']; ?>" class="btn btn-primary float-right"><i class="fa fa-eye"></i></a>
+                            <a href="<?= BASEURL; ?>/DashboardUser/edit/<?= $user['id']; ?>" class="btn btn-success float-right" ><i class="fa fa-pen"></i></a>
+                            <a href="<?= BASEURL; ?>/DashboardUser/hapus/<?= $user['id']; ?>" class="btn btn-danger float-right" onclick="return confirm('yakin?');"><i class="fa fa-trash"></i></a>
                         </div>
                         </td>
                         </tr>

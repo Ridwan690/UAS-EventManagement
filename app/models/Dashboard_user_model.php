@@ -1,7 +1,7 @@
 <?php 
 
 class Dashboard_user_model {
-    private $table = 'event';
+    private $table = 'users';
     private $db;
 
     public function __construct()
@@ -9,41 +9,44 @@ class Dashboard_user_model {
         $this->db = new Database;
     }
 
-    public function getAllEvent()
+    public function getAllUsers()
     {
         $this->db->query('SELECT * FROM ' . $this->table);
         return $this->db->resultSet();
     }
 
-    public function getEventById($id)
+    public function getUserById($id)
     {
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
         $this->db->bind('id', $id);
         return $this->db->single();
     }
 
-    public function tambahDataEvent($data)
+    public function tambahDataUser($data)
     {
-        $query = "INSERT INTO event (title, deskripsi, venue, date, time, number_of_participants)
-                VALUES (:title, :deskripsi, :venue, :date, :time, :number_of_participants)";
+        $query = "INSERT INTO users (name, email, password, role)
+                VALUES (:name, :email, :password, :role)";
         
         $this->db->query($query);
-        $this->db->bind('title', $data['title']);
-        $this->db->bind('deskripsi', $data['deskripsi']);
-        $this->db->bind('venue', $data['venue']);
-        $this->db->bind('date', $data['date']);
-        $this->db->bind('time', $data['time']);
-        $this->db->bind('number_of_participants', $data['number_of_participants']);
+        $this->db->bind('name', $data['name']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('password', $data['password']);
+        $this->db->bind('role', $data['role']);
 
         $this->db->execute();
         return $this->db->rowCount();
     }
-
-
-
-    public function hapusDataEvent($id)
+    public function editUser($id)
     {
-        $query = "DELETE FROM event WHERE id = :id";
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+        $this->db->bind('id', $id);
+        return $this->db->single();
+    }
+
+
+    public function hapusDataUser($id)
+    {
+        $query = "DELETE FROM users WHERE id = :id";
         
         $this->db->query($query);
         $this->db->bind('id', $id);
@@ -54,20 +57,20 @@ class Dashboard_user_model {
     }
 
 
-    public function ubahDataEvent($data)
+    public function ubahDataUser($data)
     {
-        $query = "UPDATE 'event' SET
-                    title = :title,
-                    deskripsi = :deskripsi,
-                    venue = :venue,
-                    number_of_participants = :number_of_participants
+        $query = "UPDATE users SET
+                    name = :name,
+                    email = :email,
+                    password = :password,
+                    role = :role
                   WHERE id = :id";
         
         $this->db->query($query);
-        $this->db->bind('title', $data['title']);
-        $this->db->bind('deskripsi', $data['deskripsi']);
-        $this->db->bind('venue', $data['venue']);
-        $this->db->bind('number_of_participants', $data['number_of_participants']);
+        $this->db->bind('name', $data['name']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('password', $data['password']);
+        $this->db->bind('role', $data['role']);
         $this->db->bind('id', $data['id']);
 
         $this->db->execute();
@@ -76,10 +79,10 @@ class Dashboard_user_model {
     }
 
 
-    public function cariDataEvent()
+    public function cariDataUser()
     {
         $keyword = $_POST['keyword'];
-        $query = "SELECT * FROM 'event' WHERE title LIKE :keyword";
+        $query = "SELECT * FROM 'users' WHERE name LIKE :keyword";
         $this->db->query($query);
         $this->db->bind('keyword', "%$keyword%");
         return $this->db->resultSet();
