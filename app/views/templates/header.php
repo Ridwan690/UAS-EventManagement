@@ -3,105 +3,119 @@
 if (session_status() === PHP_SESSION_NONE) {
   session_start();
 }
-
-
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>Halaman <?= $data['judul']; ?></title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta charset="utf-8">
+        <meta name="author" content="Harry Boo">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="<?= BASEURL; ?>/front-assets/assets/img/favicon.png">
+        <link rel="apple-touch-icon" href="<?= BASEURL; ?>/front-assets/assets/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?= BASEURL; ?>/front-assets/assets/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?= BASEURL; ?>/front-assets/assets/img/apple-touch-icon-114x114.png">
+        
+        <!-- Load Core CSS 
+        =====================================-->
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/core/bootstrap-3.3.7.min.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/core/animate.min.css">
+        
+        <!-- Load Main CSS 
+        =====================================-->
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/main/main.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/main/setting.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/main/hover.css">
+        
+        <!-- Load Magnific Popup CSS 
+        =====================================-->
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/magnific/magic.min.css">        
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/magnific/magnific-popup.css">              
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/magnific/magnific-popup-zoom-gallery.css">
+        
+        <!-- Load OWL Carousel CSS 
+        =====================================-->
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/owl-carousel/owl.carousel.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/owl-carousel/owl.theme.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/owl-carousel/owl.transitions.css">
+        
+        <!-- Load Color CSS - Please uncomment to apply the color.
+        =====================================      
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/blue.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/brown.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/cyan.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/dark.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/green.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/orange.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/purple.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/pink.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/red.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/yellow.css">-->
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/color/pasific.css">
+        
+        <!-- Load Fontbase Icons - Please Uncomment to use linea icons
+        =====================================       
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/linea-arrows-10.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/linea-basic-10.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/linea-basic-elaboration-10.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/linea-ecommerce-10.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/linea-music-10.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/linea-software-10.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/linea-weather-10.css">--> 
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/font-awesome.css">
+        <link rel="stylesheet" href="<?= BASEURL; ?>/front-assets/assets/css/icon/et-line-font.css">
+        
+        <!-- Load JS
+        HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+        WARNING: Respond.js doesn't work if you view the page via file://
+        =====================================-->
 
-<head>
-  <meta charset="UTF-8">
-  <title>Halaman
-    <?= $data['judul']; ?>
-  </title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="<?= BASEURL; ?>/css/style.css">
-
-  <style>
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-    }
-
-    .content {
-      min-height: 100%;
-      margin-bottom: -60px;
-    }
-
-    .image-preview {
-      max-height: 20px;
-    }
-
-    .footer {
-      height: 60px;
-      /* Tinggi footer */
-      background-color: #f5f5f5;
-      padding: 10px;
-    }
-
-    .bg-image-vertical {
-      position: relative;
-      overflow: hidden;
-      background-repeat: no-repeat;
-      background-position: right center;
-      background-size: auto 100%;
-      max-height: 200px
-    }
-
-    .card-img-top {
-      width: 100%;
-      height: 15vw;
-      object-fit: cover;
-    }
-  </style>
-</head>
-
-<body>
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="<?= BASEURL; ?>">EFG</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav me-auto">
-          <a class="nav-item nav-link active" href="<?= BASEURL; ?>">Home</a>
-          <!-- <a class="nav-item nav-link" href="<?= BASEURL; ?>/event">Event</a> -->
-          <a class="nav-item nav-link" href="<?= BASEURL; ?>/about">About</a>
-        </div>
-        <?php if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true): ?>
-          <div class="navbar-nav">
-            <a class="nav-item nav-link" href="<?= BASEURL; ?>/dashboard">Dashboard</a>
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <?= $username; ?>
-              </a>
-              <ul class="dropdown-menu">
-                <form id="logout" action="<?= BASEURL; ?>/auth/logout" method="post">
-                  <a href="#" onclick="submitForm()" class="dropdown-item">
-                    <i class="fas fa-arrow-right mr-2"></i> Logout
-                  </a>
-                </form>
-                <script>
-                    function submitForm() {
-                        document.getElementById('logout').submit();
-                    }
-                </script>
-              </ul>
-            </li> -->
-          </div>
-        <?php endif; ?>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <div class="content">
-    <!-- Your remaining HTML code -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body  id="page-top" data-spy="scroll" data-target=".navbar" data-offset="100">
+        
+        <a href="#page-top" class="go-to-top">
+            <i class="fa fa-long-arrow-up"></i>
+        </a>
+        
+        
+        <!-- Navigation Area
+        ===================================== -->
+        <nav class="navbar navbar-pasific navbar-mp megamenu navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll font-open-sans" href="#page-top">   
+                        Event Management
+                    </a>
+                </div>
+        
+                <div class="navbar-collapse collapse navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown megamenu-fw has-dropdown-menu"><a href="<?= BASEURL; ?>/" class="dropdown-toggle color-light">Home </a>
+                        </li>
+                        <li class="dropdown megamenu-fw has-dropdown-menu"><a href="<?= BASEURL; ?>/event" class="dropdown-toggle color-light">All Event </a>
+                        </li>
+                        <li class="dropdown megamenu-fw has-dropdown-menu"><a href="<?= BASEURL; ?>/about" class="dropdown-toggle color-light">About </a>
+                        </li>
+                        <?php if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true): ?>
+                            <li class="dropdown megamenu-fw has-dropdown-menu"><a href="<?= BASEURL; ?>/dashboard" class="dropdown-toggle color-light">Dashboard </a>
+                            </li>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        

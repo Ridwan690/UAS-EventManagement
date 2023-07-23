@@ -1,35 +1,64 @@
-  
-  </div>
-  <footer class="footer bg-light text-dark text-center py-3">
-    <div class="container">
-      <p>&copy; 2023 Event Management. All rights reserved.</p>
-    </div>
-  </footer>
+<!-- footer Area
+        ===================================== -->
+        <div id="footer" class="footer-two pt10">
+            
+            <div class="container-fluid pt20">
+                <div class="container">
+                    <div class="row">
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="<?= BASEURL; ?>/js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<script>
-    document.getElementById('images').addEventListener('change', function(event) {
-        var previewContainer = document.querySelector('.image-preview');
-        previewContainer.innerHTML = ''; // Bersihkan pratinjau sebelumnya
-    
-        var files = event.target.files;
-        for (var i = 0; i < files.length; i++) {
-          var file = files[i];
-          var reader = new FileReader();
-    
-          reader.onload = function(event) {
-            var imgElement = document.createElement('img');
-            imgElement.src = event.target.result;
-            imgElement.classList.add('preview-image');
-            previewContainer.appendChild(imgElement);
-          }
-    
-          reader.readAsDataURL(file);
-        }
-      });
-</script>
-</body>
+                        <!-- copyright start -->
+                        <div class="col-md-6 col-sm-6 col-xs-6 pull-left">
+                            <p>Copyright &copy;2023 <a href="#">Event Management.</a>. All rights reserved.</p>
+                        </div>
+                        <!-- copyright end -->
+
+                        <!-- footer bottom start -->
+                        <div class="col-md-6 col-sm-6 col-xs-6 pull-right">
+                            <p class="text-right">
+                                <a href="#" class="mr20">Privacy Policy</a>
+                                <a href="#" class="mr20">Term of Use</a>
+                            </p>
+                        </div>
+                        <!-- footer bottom end -->
+
+                    </div><!-- row end -->
+                </div><!-- container end -->
+            </div><!-- container-fluid end -->
+        </div><!-- footer end -->
+        
+        
+        <!-- JQuery Core
+        =====================================-->
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/core/jquery.min.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/core/bootstrap-3.3.7.min.js"></script>
+        
+        <!-- Magnific Popup
+        =====================================-->
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/magnific-popup/magnific-popup-zoom-gallery.js"></script>
+        
+        <!-- Progress Bars
+        =====================================-->
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/progress-bar/bootstrap-progressbar.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/progress-bar/bootstrap-progressbar-main.js"></script>        
+
+        <!-- Textillate
+        =====================================-->
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/textillate/jquery.fittext.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/textillate/jquery.lettering.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/textillate/jquery.textillate.js"></script>
+        
+        <!-- JQuery Main
+        =====================================-->
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/jquery.appear.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/isotope.pkgd.min.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/parallax.min.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/jquery.countTo.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/owl.carousel.min.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/jquery.sticky.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/ion.rangeSlider.min.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/imagesloaded.pkgd.min.js"></script>
+        <script src="<?= BASEURL; ?>/front-assets/assets/js/main/main.js"></script>    
+        
+    </body>
 </html>

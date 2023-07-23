@@ -1,112 +1,146 @@
-<div class="container mt-3">
-
-    <div class="row">
-      <div class="col-lg-6">
-        <?php Flasher::flash(); ?>
-      </div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-lg-6">
-        <button type="button" class="btn btn-primary tombolTambahDataEvent" data-toggle="modal" data-target="#formModalEvent">
-          Tambah Data Event
-        </button>
-      </div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-lg-6">
-        <form action="<?= BASEURL; ?>/event/cari" method="post">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="cari event.." name="keyword" id="keyword" autocomplete="off">
-            <div class="input-group-append">
-              <button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
+        <header class="pt100 pb100 parallax-window-2" data-parallax="scroll" data-speed="0.5" data-image-src="<?= BASEURL; ?>/front-assets/assets/img/bg/new-img-bg-14.jpg" data-positionY="1000">
+            <div class="intro-body text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 pt50">
+                            <h1 class="brand-heading font-montserrat text-uppercase color-light" data-in-effect="fadeInDown">
+                                All Event
+                                <small class="color-light alpha7">More Event</small>
+                            </h1>                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  
-    <div class="row">
-        <div class="col-lg-6">
-          <h3>Daftar Event</h3>
-          <ul class="list-group">
-            <?php foreach( $data['event'] as $event ) : ?>
-              <li class="list-group-item">
-                  <?= $event['title']; ?>
-                  <a href="<?= BASEURL; ?>/event/hapus/<?= $event['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('yakin?');">hapus</a>
-                  <a href="<?= BASEURL; ?>/event/ubah/<?= $event['id']; ?>" class="badge badge-success float-right tampilModalUbahEvent" data-toggle="modal" data-target="#formModal" data-id="<?= $event['id']; ?>">ubah</a>
-                  <a href="<?= BASEURL; ?>/event/detail/<?= $event['id']; ?>" class="badge badge-primary float-right">detail</a>
-              </li>
-            <?php endforeach; ?>
-          </ul>      
-        </div>
-    </div>
+        </header>
 
-</div>
+        <!-- Service Area
+        ===================================== -->
+        <div id="service" class="pt75 pb25">
+            <div class="container">
+                
+                <!-- title and short description start -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 class="font-size-normal">
+                            <small>Modern Service</small>
+                            We Build Website &amp; App
+                            <small class="heading heading-solid center-block"></small>
+                        </h1>
+                    </div>
 
-
-<!-- Modal -->
-<div class="modal fade" id="formModalEvent" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="formModalLabel">Tambah Data Event</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <p class="lead">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt voluptatem. 
+                        </p>
+                    </div>
+                </div>
+                <!-- title and short description end -->
+                
+                <!-- service one start -->
+                <div class="row mt75">
+                    <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
+                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-3.png" alt="website service" class="img-responsive">
+                    </div>
+                    <div class="col-md-5 animated" data-animation="fadeIn" data-animation-delay="100">
+                        
+                        <h3 class="font-size-normal">
+                            <small class="color-primary">Web Design &amp; Development</small>
+                            Wordpress. Joomla. Opencart. Etc.
+                        </h3>
+                        
+                        <p class="mt20">
+                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
+                            anything that you want to make great success.
+                        </p>
+                        <p>
+                            <i class="fa fa-wordpress fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-joomla fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-drupal fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-shopping-basket fa-2x color-gray2 mr10"></i>
+                        </p>
+                        <p>
+                            <a class="button-o button-sm button-primary hover-fade">Start Project</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- service one end -->
+                
+                <!-- service two start -->
+                <div class="row mt100">
+                    <div class="col-md-6 col-md-push-6 animated" data-animation="fadeInRight" data-animation-delay="100">
+                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-4.png" alt="website service" class="img-responsive">
+                    </div>
+                    <div class="col-md-5 col-md-pull-5">
+                        
+                        <h3 class="font-size-normal">
+                            <small class="color-success">App Design &amp; Development</small>
+                            Android. iOS. Windows. Etc.
+                        </h3>
+                        
+                        <p class="mt20 animated" data-animation="fadeIn" data-animation-delay="100">
+                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
+                            anything that you want to make great success.
+                        </p>
+                        <p>
+                            <i class="fa fa-android fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-apple fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-windows fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-amazon fa-2x color-gray2 mr10"></i>
+                        </p>
+                        <p>
+                            <a class="button-o button-sm button-success hover-fade">Start Project</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- service two end -->
+                
+                <!-- service three start -->
+                <div class="row mt75">
+                    <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
+                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-5.jpg" alt="website service" class="img-responsive">
+                    </div>
+                    <div class="col-md-5">
+                        
+                        <h3 class="font-size-normal">
+                            <small class="color-red">Graphic Design</small>
+                            Logo. Icon. Infographic. Etc.
+                        </h3>
+                        
+                        <p class="mt20 animated" data-animation="fadeIn" data-animation-delay="100">
+                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
+                            anything that you want to make great success.
+                        </p>
+                        <p>
+                            <i class="fa fa-file-image-o fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-object-ungroup fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-paper-plane-o fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-camera-retro fa-2x color-gray2 mr10"></i>
+                        </p>
+                        <p>
+                            <a class="button-o button-sm button-red hover-fade">Start Project</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- service three end -->
+                
+            </div><!-- container end -->
+        </div><!-- section service end -->
         
-        <form action="<?= BASEURL; ?>/event/tambah" method="post" enctype="multipart/form-data">
-          <input type="hidden" name="id" id="id">
-          <div class="form-group">
-            <label for="title">Title</label>
-            <input type="text" class="form-control" id="title" name="title" autocomplete="off" required>
-          </div>
 
-          <div class="form-group">
-            <label for="deskripsi">Description</label>
-            <input type="text" class="form-control" id="deskripsi" name="deskripsi" autocomplete="off">
-          </div>
-
-          <div class="form-group">
-            <label for="venue">Location</label>
-            <input type="text" class="form-control" id="venue" name="venue" >
-          </div>
-
-          <div class="form-group">
-            <label for="date">Date</label>
-            <input type="date" class="form-control" id="date" name="date" autocomplete="off">
-          </div>
-
-          <div class="form-group">
-            <label for="time">Time</label>
-            <input type="time" class="form-control" id="time" name="time" autocomplete="off">
-          </div>
-
-          <div class="form-group">
-            <label for="number_of_participants">Number of Participants</label>
-            <input type="number" class="form-control" id="number_of_participants" name="number_of_participants" autocomplete="off">
-          </div>
-          
-          <!-- <div class="form-group">
-            <label for="images">Images</label>
-            <input type="file" class="form-control-file" id="images" name="images[]" multiple>
-          </div>
-          <div class="image-preview"></div> -->
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Tambah Data</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
+        <!-- Info Area
+        =====================================-->
+        <div id="info" class="bg-dark2 pt50 pb25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-13.png" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-md-6 mt25">
+                        <h3 class="color-light font-open-sans">More Than 1,200 People Love Our Product.<br>Join with us now.</h3>
+                        <a class="button button-pasific button-md pull-left mt25 hover-ripple-out">Booking Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>      
