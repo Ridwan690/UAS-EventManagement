@@ -31,7 +31,7 @@
                     <div class="col-md-12 text-center">
                         <h1 class="font-size-normal">
                             <small>Welcome to EFG Event Management</small>
-                            We Are Smart Creative Agency
+                            Creating Unforgettable Moments, Together.
                             <small class="heading heading-solid center-block"></small>
                         </h1>
                     </div>
@@ -40,11 +40,9 @@
                     <!-- title description start -->
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <p>
-                            <span class="lead"><strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam 
-                            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.</strong></span><br><br>
+                            <span class="lead"><strong>Kami memahami betapa pentingnya acara bagi Anda, baik itu pernikahan, konferensi, pameran, atau acara khusus lainnya. Oleh karena itu, tim profesional kami berkomitmen untuk memberikan pengalaman yang tak terlupakan kepada Anda dan semua tamu yang hadir.</strong></span><br><br>
 
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                            Jadi, jika Anda mencari partner yang dapat diandalkan untuk mengorganisir acara yang luar biasa, percayakan kepada EFG Event Management. Hubungi kami hari ini untuk mendiskusikan detail acara Anda dan mulailah merencanakan momen yang tak terlupakan bersama kami.
                         </p>
                     </div>
                     <!-- title description end -->
@@ -55,9 +53,9 @@
                     <!-- item one start -->
                     <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
                         <div class="content-box content-box-center">                        
-                            <span class="icon-layers color-pasific"></span>
-                                <h5>Clean Code</h5>
-                            <p>Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                            <span class="icon-hourglass color-pasific"></span>
+                                <h5>Pengalaman yang Luar Biasa</h5>
+                            <p>Dengan lebih dari 10 tahun pengalaman dalam industri event management, kami telah sukses mengorganisir berbagai acara dari pernikahan mewah hingga konferensi berskala besar.</p>
                       
                         </div>
                     </div>
@@ -66,9 +64,9 @@
                     <!-- item two start -->
                     <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInLeft" data-animation-delay="200">
                         <div class="content-box content-box-center">                        
-                            <span class="icon-mobile color-pasific"></span>
-                                <h5>Mobile Optimzed</h5>
-                            <p>Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                            <span class="icon-paintbrush color-pasific"></span>
+                                <h5>Perhatian Terhadap Detail</h5>
+                            <p> Kami memperhatikan setiap detail acara Anda, mulai dari pemilihan lokasi yang ideal hingga desain dekorasi yang menakjubkan. Kami berkomitmen untuk memberikan pengalaman yang tak terlupakan bagi Anda dan semua tamu yang hadir.</p>
                       
                         </div>
                     </div>
@@ -78,8 +76,8 @@
                     <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInRight" data-animation-delay="300">
                         <div class="content-box content-box-center">                        
                             <span class="icon-camera color-pasific"></span>
-                                <h5>Photographer</h5>
-                            <p>Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                                <h5>Jaringan Vendor Terpercaya</h5>
+                            <p>Kami memiliki kemitraan yang solid dengan berbagai vendor terpercaya di industri ini. Ini memungkinkan kami untuk menyediakan pilihan terbaik dalam hal hiburan, catering, teknologi audio-visual, dan banyak lagi.</p>
                       
                         </div>
                     </div>
@@ -88,9 +86,9 @@
                     <!-- item four start -->
                     <div class="col-md-3 col-sm-6 col-xs-6 animated" data-animation="fadeInRight" data-animation-delay="400">
                         <div class="content-box content-box-center">                        
-                            <span class="icon-briefcase color-pasific"></span>
-                                <h5>Awesome Portfolio</h5>
-                            <p>Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor.</p>
+                            <span class="icon-profile-male color-pasific"></span>
+                                <h5>Tim Profesional</h5>
+                            <p>Tim kami terdiri dari para ahli yang berdedikasi dalam memberikan layanan terbaik. Kami menggabungkan kreativitas, inovasi, dan keahlian manajemen untuk memastikan acara Anda berjalan dengan sempurna.</p>
                       
                         </div>
                     </div>
@@ -108,10 +106,10 @@
                 <div class="row pt75">
                     <div class="col-md-12 text-center">
                         <h1 class="color-light">
-                            <small class="color-light">The best way to be success</small>
-                            Are you ready to be success with us?
+                            <small class="color-light">Event Manager terbaik yang pernah ada</small>
+                            Apakah kalian ingin membuat event yang meriah dan juga tak terlupakan?
                         </h1>
-                        <a class="button button-md button-pasific hover-ripple-out mt25">Create Event</a>
+                        <a class="button button-md button-pasific hover-ripple-out mt25">Buat Event</a>
                     </div>   
                 </div>
             </div>
@@ -126,16 +124,14 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h1 class="font-size-normal">
-                            <small>New Service</small>
-                            Latest Event
+                            Event Terbaru
                             <small class="heading heading-solid center-block"></small>
                         </h1>
                     </div>
 
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <p class="lead">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt voluptatem. 
+                            Berikut adalah beberapa event yang berhasil kita handle. 
                         </p>
                     </div>
                 </div>
@@ -144,27 +140,19 @@
                 <!-- service one start -->
                 <div class="row mt75">
                     <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-3.png" alt="website service" class="img-responsive">
+                        <img src="<?= BASEURL; ?>/img/birthday.jpg" alt="website service" class="img-responsive">
                     </div>
                     <div class="col-md-5 animated" data-animation="fadeIn" data-animation-delay="100">
                         
                         <h3 class="font-size-normal">
-                            <small class="color-primary">Web Design &amp; Development</small>
-                            Wordpress. Joomla. Opencart. Etc.
+                        Sparkling Memories: Merayakan Kehidupan dalam Pesta Ulang Tahun yang Berkilau
                         </h3>
                         
                         <p class="mt20">
-                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
-                            anything that you want to make great success.
+                        EFG Event Management mengundang Anda untuk merayakan momen spesial dan berkilau dalam acara ulang tahun yang tak terlupakan. Pesta ulang tahun adalah saat untuk merayakan kehidupan, membagikan kebahagiaan dengan orang-orang terkasih, dan menciptakan kenangan indah yang akan dikenang selamanya.
                         </p>
                         <p>
-                            <i class="fa fa-wordpress fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-joomla fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-drupal fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-shopping-basket fa-2x color-gray2 mr10"></i>
-                        </p>
-                        <p>
-                            <a class="button-o button-sm button-primary hover-fade">Booking Now</a>
+                            
                         </p>
                     </div>
                 </div>
@@ -173,27 +161,19 @@
                 <!-- service two start -->
                 <div class="row mt100">
                     <div class="col-md-6 col-md-push-6 animated" data-animation="fadeInRight" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-4.png" alt="website service" class="img-responsive">
+                        <img src="<?= BASEURL; ?>/img/wedparty.jpg" alt="website service" class="img-responsive">
                     </div>
                     <div class="col-md-5 col-md-pull-5">
                         
                         <h3 class="font-size-normal">
-                            <small class="color-success">App Design &amp; Development</small>
-                            Android. iOS. Windows. Etc.
+                        Love's Uniting Journey: A Wedding Party of Endless Romance
                         </h3>
                         
                         <p class="mt20 animated" data-animation="fadeIn" data-animation-delay="100">
-                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
-                            anything that you want to make great success.
+                        Dalam "Love's Uniting Journey," EFG Event Management mengundang Anda untuk merayakan kisah cinta yang tak terlupakan dalam sebuah pernikahan yang mempesona. Pada tanggal 20 Juni 2023, kami akan menyelenggarakan pesta pernikahan yang indah untuk pasangan Iwan dan Juna, sebuah perayaan cinta yang tak tergantikan.
                         </p>
                         <p>
-                            <i class="fa fa-android fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-apple fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-windows fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-amazon fa-2x color-gray2 mr10"></i>
-                        </p>
-                        <p>
-                            <a class="button-o button-sm button-success hover-fade">Booking Now</a>
+
                         </p>
                     </div>
                 </div>
@@ -202,27 +182,19 @@
                 <!-- service three start -->
                 <div class="row mt75">
                     <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-5.jpg" alt="website service" class="img-responsive">
+                        <img src="<?= BASEURL; ?>/img/comunity.jpg" alt="website service" class="img-responsive">
                     </div>
                     <div class="col-md-5">
                         
                         <h3 class="font-size-normal">
-                            <small class="color-red">Graphic Design</small>
-                            Logo. Icon. Infographic. Etc.
+                        Harmony in Unity: A Community Gathering to Celebrate Togetherness
                         </h3>
                         
                         <p class="mt20 animated" data-animation="fadeIn" data-animation-delay="100">
-                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
-                            anything that you want to make great success.
+                        Bersama-sama, mari merayakan kebersamaan dalam "Harmony in Unity," acara comunity gathering yang menghadirkan momen istimewa bagi komunitas kita. Pada tanggal 23 Juli 2023, EFG Event Management dengan bangga mempersembahkan acara yang memadukan keceriaan, kebersamaan, dan semangat kekeluargaan.
                         </p>
                         <p>
-                            <i class="fa fa-file-image-o fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-object-ungroup fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-paper-plane-o fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-camera-retro fa-2x color-gray2 mr10"></i>
-                        </p>
-                        <p>
-                            <a class="button-o button-sm button-red hover-fade">Booking Now</a>
+
                         </p>
                     </div>
                 </div>
@@ -234,7 +206,7 @@
         
         <!-- Info Area
         ===================================== -->
-        <div id="Info-1" class="bg-gray pt30 bb-solid-1">
+        <!-- <div id="Info-1" class="bg-gray pt30 bb-solid-1">
             <div class="container">
                 <div class="row">                
                     <div class="col-md-8 col-md-offset-2 text-center pb35">
@@ -244,4 +216,4 @@
                     </div>                
                 </div>
             </div>
-        </div>
+        </div> -->
