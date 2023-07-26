@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="time" class="col-sm-2 col-form-label">Time</label>
+                            <label for="time" class="col-sm-2 col-form-label">Start Time</label>
                             <div class="col-sm-10">
                                 <input type="time" class="form-control" id="time" name="time">
                             </div>

@@ -104,14 +104,26 @@ if (session_status() === PHP_SESSION_NONE) {
         
                 <div class="navbar-collapse collapse navbar-main-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="dropdown megamenu-fw has-dropdown-menu"><a href="<?= BASEURL; ?>/" class="dropdown-toggle color-light">Home </a>
+                        <li class="dropdown"><a href="<?= BASEURL; ?>/" class="dropdown-toggle color-light">Home </a>
                         </li>
-                        <li class="dropdown megamenu-fw has-dropdown-menu"><a href="<?= BASEURL; ?>/event" class="dropdown-toggle color-light">All Event </a>
+                        <li class="dropdown"><a href="<?= BASEURL; ?>/event" class="dropdown-toggle color-light">All Event </a>
                         </li>
-                        <li class="dropdown megamenu-fw has-dropdown-menu"><a href="<?= BASEURL; ?>/about" class="dropdown-toggle color-light">About </a>
+                        <li class="dropdown"><a href="<?= BASEURL; ?>/about" class="dropdown-toggle color-light">About </a>
                         </li>
                         <?php if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true): ?>
-                            <li class="dropdown megamenu-fw has-dropdown-menu"><a href="<?= BASEURL; ?>/dashboard" class="dropdown-toggle color-light">Dashboard </a>
+                            <?php if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']): ?>
+                                <li class="dropdown"><a href="<?= BASEURL; ?>/dashboard" class="dropdown-toggle color-light">Dashboard </a>
+                                </li>
+                            <?php endif; ?>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle color-light" data-toggle="dropdown"> Hello <?= $_SESSION['username'] ?> </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="<?= BASEURL; ?>/auth/logout"  class="color-light">Logout </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        <?php else: ?>
+                            <!-- Jika pengguna belum login -->
+                            <li class="dropdown"><a href="<?= BASEURL; ?>/auth" class="dropdown-toggle color-light">Login </a>
                             </li>
                         <?php endif; ?>
                     </ul>

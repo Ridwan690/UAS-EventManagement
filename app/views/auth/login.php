@@ -83,7 +83,7 @@
               <!-- Email input -->
               <div class="form-outline mb-4">
                   <label class="form-label" for="form3Example3">Email address</label>
-                <input type="email" id="form3Example3" class="form-control"  name="email" required/>
+                  <input type="email" id="form3Example3" class="form-control"  name="email" required/>
               </div>
 
               <!-- Password input -->

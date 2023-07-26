@@ -64,7 +64,7 @@ class Dashboard_event_model {
     public function tambahDataEvent($data)
     {
         // Insert event data into the 'event' table
-        $query = "INSERT INTO event (title, deskripsi, venue, date, time, number_of_participants)
+        $query = "INSERT INTO $this->table (title, deskripsi, venue, date, time, number_of_participants)
                 VALUES (:title, :deskripsi, :venue, :date, :time, :number_of_participants)";
 
         $this->db->query($query);
@@ -178,9 +178,43 @@ class Dashboard_event_model {
 
     public function getLatestEvents($limit = 3)
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY date DESC, time DESC LIMIT :limit');
+        $query = "SELECT event.*, image.image AS image_filename 
+              FROM $this->table AS event
+              LEFT JOIN $this->imageTable AS image ON event.id = image.event_id
+              ORDER BY event.date DESC, event.time DESC
+              LIMIT :limit";
+    
+        $this->db->query($query);
         $this->db->bind('limit', $limit);
-        return $this->db->resultSet();
+        $results = $this->db->resultSet();
+
+        // Group events by ID and collect associated images
+        $events = [];
+        foreach ($results as $row) {
+            $event_id = $row['id'];
+
+            if (!isset($events[$event_id])) {
+                // Create a new event entry
+                $events[$event_id] = [
+                    'id' => $event_id,
+                    'title' => $row['title'],
+                    'deskripsi' => $row['deskripsi'],
+                    'venue' => $row['venue'],
+                    'date' => $row['date'],
+                    'time' => $row['time'],
+                    'number_of_participants' => $row['number_of_participants'],
+                    'images' => []
+                ];
+            }
+
+            if (!empty($row['image_filename'])) {
+                // Add image filename to the event's images array
+                $events[$event_id]['images'][] = $row['image_filename'];
+            }
+        }
+
+        return array_values($events);
+        
     }
 
 

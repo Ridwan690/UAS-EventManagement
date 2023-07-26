@@ -72,7 +72,7 @@
 
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
-            <form>
+            <form action="<?= BASEURL; ?>/auth/createUser" method="post">
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <div class="row">
                 <div class="col-12 text-center mb-3">
@@ -80,22 +80,23 @@
                 </div>
                 <div class="col-md-12 mb-4">
                   <div class="form-outline">
-                      <label class="form-label" for="form3Example1">Username</label>
-                    <input type="text" id="form3Example1" class="form-control" />
+                      <input type="hidden" id="role" class="form-control" name="role" value="USER" required />
+                      <label class="form-label" for="name">Username</label>
+                      <input type="text" id="name" class="form-control" name="name" required />
                   </div>
                 </div>
               </div>
 
               <!-- Email input -->
               <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example3">Email address</label>
-                <input type="email" id="form3Example3" class="form-control" />
+                  <label class="form-label" for="email">Email address</label>
+                  <input type="email" id="email" class="form-control"  name="email" required/>
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                  <label class="form-label" for="form3Example4">Password</label>
-                <input type="password" id="form3Example4" class="form-control" />
+                  <label class="form-label" for="password">Password</label>
+                  <input type="password" id="password" class="form-control" name="password" required />
               </div>
 
               <!-- Submit button -->
@@ -105,7 +106,7 @@
                   </button>
               </div>
 
-                <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="<?= BASEURL; ?>/auth" style="color: #393f81;">Login</a></p>
+                <p class="mb-5 pb-lg-2" style="color: #393f81;">Do you have an account? <a href="<?= BASEURL; ?>/auth" style="color: #393f81;">Login</a></p>
             </form>
           </div>
         </div>

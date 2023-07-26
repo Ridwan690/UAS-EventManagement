@@ -25,6 +25,8 @@
 <!-- AdminLTE App -->
 <script src="<?= BASEURL; ?>/assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
+<!-- Di halaman dashboard atau halaman tujuan setelah login berhasil -->
+
 
 </body>
 </html>
