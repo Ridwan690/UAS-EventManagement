@@ -153,11 +153,7 @@
                             Wordpress. Joomla. Opencart. Etc.
                         </h3>
                         <p class="mt10">
-                        <?php
-                            $dateTime = DateTime::createFromFormat('Y-m-d - H:i:s', $event['date'] . ' - ' . $event['time']);
-                            $formattedDateTime = $dateTime->format('d-F-Y H:i');
-                            echo $formattedDateTime;
-                        ?>
+
                         </p>
                         <p class="mt20">
                             We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
