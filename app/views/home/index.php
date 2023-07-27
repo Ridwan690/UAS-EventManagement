@@ -141,7 +141,6 @@
                 </div>
                 <!-- title and short description end -->
                 
-                <?php foreach ( $data['event'] as $event ): ?>
                 <!-- service one start -->
                 <div class="row mt75">
                     <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
@@ -238,17 +237,3 @@
             </div><!-- container end -->
         </div><!-- section service end -->
         
-        
-        <!-- Info Area
-        ===================================== -->
-        <!-- <div id="Info-1" class="bg-gray pt30 bb-solid-1">
-            <div class="container">
-                <div class="row">                
-                    <div class="col-md-8 col-md-offset-2 text-center pb35">
-                        <h4>We are here to help you reach success</h4>
-                        <a class="button button-md button-blue hover-ripple-out mr10">Create Event</a>
-                        <a class="button button-md button-pasific hover-ripple-out">Booking</a>
-                    </div>                
-                </div>
-            </div>
-        </div> -->
