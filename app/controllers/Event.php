@@ -4,9 +4,17 @@ class Event extends Controller {
     public function index()
     {
         $data['judul'] = 'Daftar Event';
-        $data['event'] = $this->model('Event_model')->getAllEvent();
+        $data['event'] = $this->model('Dashboard_event_model')->getAllEvent();
         $this->view('templates/header', $data);
         $this->view('event/index', $data);
+        $this->view('templates/footer');
+    }
+    public function create()
+    {
+        $data['judul'] = 'Create Event';
+        $data['event'] = $this->model('Dashboard_event_model')->getAllEvent();
+        $this->view('templates/header', $data);
+        $this->view('event/create', $data);
         $this->view('templates/footer');
     }
 

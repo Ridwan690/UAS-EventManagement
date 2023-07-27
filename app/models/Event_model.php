@@ -2,6 +2,7 @@
 
 class Event_model {
     private $table = 'event';
+    private $imageTable = 'image';
     private $db;
 
     public function __construct()
@@ -24,9 +25,10 @@ class Event_model {
 
     public function tambahDataEvent($data)
     {
-        $query = "INSERT INTO event (title, deskripsi, venue, date, time, number_of_participants)
+        // Insert event data into the 'event' table
+        $query = "INSERT INTO $this->table (title, deskripsi, venue, date, time, number_of_participants)
                 VALUES (:title, :deskripsi, :venue, :date, :time, :number_of_participants)";
-        
+
         $this->db->query($query);
         $this->db->bind('title', $data['title']);
         $this->db->bind('deskripsi', $data['deskripsi']);
@@ -36,26 +38,41 @@ class Event_model {
         $this->db->bind('number_of_participants', $data['number_of_participants']);
 
         $this->db->execute();
+        $event_id = $this->db->lastInsertId();
 
-        // Dapatkan ID event yang baru saja dimasukkan
-        $event_id = $this->db->getLastInsertId();
+        // Handle image upload and insertion into the 'image' table
+        if (isset($_FILES['images'])) {
+            $images = $_FILES['images'];
 
-        // Simpan setiap gambar ke dalam tabel "image"
-        $queryImage = "INSERT INTO image (event_id, image) VALUES ";
+            foreach ($images['tmp_name'] as $key => $tmp_name) {
+                // Check if the uploaded file is valid
+                if ($images['error'][$key] === UPLOAD_ERR_OK) {
+                    // Retrieve the image details
+                    $image_name = $images['name'][$key];
+                    $image_type = $images['type'][$key];
+                    $image_size = $images['size'][$key];
+                    $image_tmp_name = $images['tmp_name'][$key];
 
-        // Loop untuk setiap gambar yang diunggah
-        foreach ($data['images'] as $image) {
-            $queryImage .= "(:event_id, :image), ";
-            $this->db->bind('event_id', $event_id);
-            $this->db->bind('image', $image);
+                    // Specify the directory to store the uploaded images
+                    $upload_dir = 'C:/xampp/htdocs/UAS-EventManagement/public/images/'; // Change the directory path as per your requirement
+
+                    // Generate a unique filename for the image
+                    $image_filename = uniqid() . '_' . $image_name;
+
+                    // Move the uploaded image to the desired directory
+                    move_uploaded_file($image_tmp_name, $upload_dir . $image_filename);
+
+                    // Insert image details into the 'image' table
+                    $query = "INSERT INTO $this->imageTable (event_id, image)
+                            VALUES (:event_id, :image)";
+
+                    $this->db->query($query);
+                    $this->db->bind('event_id', $event_id);
+                    $this->db->bind('image', $image_filename);
+                    $this->db->execute();
+                }
+            }
         }
-
-        // Hapus tanda koma terakhir
-        $queryImage = rtrim($queryImage, ', ');
-
-        $this->db->query($queryImage);
-        $this->db->execute();
-
 
         return $this->db->rowCount();
     }

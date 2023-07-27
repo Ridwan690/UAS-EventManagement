@@ -41,6 +41,7 @@ class DashboardEvent extends Controller {
 
     public function tambah()
     {
+        
         if( $this->model('Dashboard_event_model')->tambahDataEvent($_POST) > 0 ) {
             Flasher::setFlash('berhasil', 'ditambahkan', 'success');
             header('Location: ' . BASEURL . '/DashboardEvent');

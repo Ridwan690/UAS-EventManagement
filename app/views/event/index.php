@@ -37,93 +37,37 @@
                     </div>
                 </div>
                 <!-- title and short description end -->
-                
+                <?php foreach ( $data['event'] as $event ): ?>
                 <!-- service one start -->
                 <div class="row mt75">
-                    <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-3.png" alt="website service" class="img-responsive">
-                    </div>
+                    <?php if (!empty($event['images'])): ?>
+                        <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
+                            <img src="<?= BASEURL; ?>/images/<?= ($event['images'][0]); ?>" alt="website service" class="img-responsive mt20" widht="400">
+                        </div>
+                    <?php endif; ?>
                     <div class="col-md-5 animated" data-animation="fadeIn" data-animation-delay="100">
                         
                         <h3 class="font-size-normal">
-                            <small class="color-primary">Web Design &amp; Development</small>
-                            Wordpress. Joomla. Opencart. Etc.
+                            <?= $event['title']; ?>
+                            <small class="color-primary"><?= $event['venue']; ?></small>
                         </h3>
-                        
+                        <p class="mt10">
+                        <?php
+                            $dateTime = DateTime::createFromFormat('Y-m-d - H:i:s', $event['date'] . ' - ' . $event['time']);
+                            $formattedDateTime = $dateTime->format('d-F-Y H:i');
+                            echo $formattedDateTime;
+                        ?>
+                        </p>
                         <p class="mt20">
-                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
-                            anything that you want to make great success.
+                            <?= $event['deskripsi']; ?>
                         </p>
                         <p>
-                            <i class="fa fa-wordpress fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-joomla fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-drupal fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-shopping-basket fa-2x color-gray2 mr10"></i>
-                        </p>
-                        <p>
-                            <a class="button-o button-sm button-primary hover-fade">Start Project</a>
+                            <a class="button-o button-sm button-primary hover-fade">View Event</a>
                         </p>
                     </div>
                 </div>
                 <!-- service one end -->
-                
-                <!-- service two start -->
-                <div class="row mt100">
-                    <div class="col-md-6 col-md-push-6 animated" data-animation="fadeInRight" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-4.png" alt="website service" class="img-responsive">
-                    </div>
-                    <div class="col-md-5 col-md-pull-5">
-                        
-                        <h3 class="font-size-normal">
-                            <small class="color-success">App Design &amp; Development</small>
-                            Android. iOS. Windows. Etc.
-                        </h3>
-                        
-                        <p class="mt20 animated" data-animation="fadeIn" data-animation-delay="100">
-                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
-                            anything that you want to make great success.
-                        </p>
-                        <p>
-                            <i class="fa fa-android fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-apple fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-windows fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-amazon fa-2x color-gray2 mr10"></i>
-                        </p>
-                        <p>
-                            <a class="button-o button-sm button-success hover-fade">Start Project</a>
-                        </p>
-                    </div>
-                </div>
-                <!-- service two end -->
-                
-                <!-- service three start -->
-                <div class="row mt75">
-                    <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-5.jpg" alt="website service" class="img-responsive">
-                    </div>
-                    <div class="col-md-5">
-                        
-                        <h3 class="font-size-normal">
-                            <small class="color-red">Graphic Design</small>
-                            Logo. Icon. Infographic. Etc.
-                        </h3>
-                        
-                        <p class="mt20 animated" data-animation="fadeIn" data-animation-delay="100">
-                            We design &amp; develope modern website and app for any type of business. Landing page, ecommerce, company profile, web application, mobile app,
-                            anything that you want to make great success.
-                        </p>
-                        <p>
-                            <i class="fa fa-file-image-o fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-object-ungroup fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-paper-plane-o fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-camera-retro fa-2x color-gray2 mr10"></i>
-                        </p>
-                        <p>
-                            <a class="button-o button-sm button-red hover-fade">Start Project</a>
-                        </p>
-                    </div>
-                </div>
-                <!-- service three end -->
+                <?php endforeach; ?>
                 
             </div><!-- container end -->
         </div><!-- section service end -->

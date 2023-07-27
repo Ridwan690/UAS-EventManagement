@@ -6,7 +6,11 @@
                             <h1 class="brand-heading font-montserrat text-uppercase color-light tlt" data-in-effect="fadeInDown">SELAMAT DATANG DI EFG EVENT MANAGEMENT</h1>
                             <p class="intro-text color-light text-open-sans text-uppercase tlt" data-in-effect="swing">Mewujudkan Acara Impian Anda</p>
                             <p class="intro-text color-light text-open-sans text-uppercase tlt" data-in-effect="swing">Apakah Anda sedang merencanakan sebuah acara yang luar biasa? Kami di EFG Event Management siap membantu Anda mengatur dan mengorganisir acara yang tak terlupakan. Dengan pengalaman dan keahlian kami, kami akan menjadikan visi Anda menjadi kenyataan.</p>
-                            <a class="button button-pasific button-lg hover-ripple-out mt50 animated" data-animation="fadeInUp" data-animation-delay="1200">Ayo mulai daftarkan acara mu!</a>
+                            <?php if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true): ?>
+                                <a href="<?= BASEURL; ?>/event/create" class="button button-pasific button-lg hover-ripple-out mt50 animated" data-animation="fadeInUp" data-animation-delay="1200">Ayo mulai daftarkan acara mu!</a>
+                            <?php else: ?>
+                                <a href="<?= BASEURL; ?>/auth" class="button button-pasific button-lg hover-ripple-out mt50 animated" data-animation="fadeInUp" data-animation-delay="1200">Ayo mulai daftarkan acara mu!</a>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -137,83 +141,44 @@
                 </div>
                 <!-- title and short description end -->
                 
+                <?php foreach ( $data['event'] as $event ): ?>
                 <!-- service one start -->
                 <div class="row mt75">
-                    <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/img/birthday.jpg" alt="website service" class="img-responsive">
-                    </div>
+                    <?php if (!empty($event['images'])): ?>
+                        <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
+                            <img src="<?= BASEURL; ?>/images/<?= ($event['images'][0]); ?>" alt="website service" class="img-responsive mt20" widht="400">
+                        </div>
+                    <?php endif; ?>
                     <div class="col-md-5 animated" data-animation="fadeIn" data-animation-delay="100">
                         
                         <h3 class="font-size-normal">
-                        Sparkling Memories: Merayakan Kehidupan dalam Pesta Ulang Tahun yang Berkilau
+                            <?= $event['title']; ?>
+                            <small class="color-primary"><?= $event['venue']; ?></small>
                         </h3>
-                        
+                        <p class="mt10">
+                            <?php
+                                $dateTime = DateTime::createFromFormat('Y-m-d - H:i:s', $event['date'] . ' - ' . $event['time']);
+                                $formattedDateTime = $dateTime->format('d-F-Y H:i');
+                                echo $formattedDateTime;
+                            ?>
+                        </p>
                         <p class="mt20">
-                        EFG Event Management mengundang Anda untuk merayakan momen spesial dan berkilau dalam acara ulang tahun yang tak terlupakan. Pesta ulang tahun adalah saat untuk merayakan kehidupan, membagikan kebahagiaan dengan orang-orang terkasih, dan menciptakan kenangan indah yang akan dikenang selamanya.
+                            <?= $event['deskripsi']; ?>
                         </p>
                         <p>
-                            
+                            <i class="fa fa-wordpress fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-joomla fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-drupal fa-2x color-gray2 mr10"></i>
+                            <i class="fa fa-shopping-basket fa-2x color-gray2 mr10"></i>
+                        </p>
+                        <p>
+                            <a class="button-o button-sm button-primary hover-fade">View Event</a>
                         </p>
                     </div>
                 </div>
                 <!-- service one end -->
-                
-                <!-- service two start -->
-                <div class="row mt100">
-                    <div class="col-md-6 col-md-push-6 animated" data-animation="fadeInRight" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/img/wedparty.jpg" alt="website service" class="img-responsive">
-                    </div>
-                    <div class="col-md-5 col-md-pull-5">
-                        
-                        <h3 class="font-size-normal">
-                        Love's Uniting Journey: A Wedding Party of Endless Romance
-                        </h3>
-                        
-                        <p class="mt20 animated" data-animation="fadeIn" data-animation-delay="100">
-                        Dalam "Love's Uniting Journey," EFG Event Management mengundang Anda untuk merayakan kisah cinta yang tak terlupakan dalam sebuah pernikahan yang mempesona. Pada tanggal 20 Juni 2023, kami akan menyelenggarakan pesta pernikahan yang indah untuk pasangan Iwan dan Juna, sebuah perayaan cinta yang tak tergantikan.
-                        </p>
-                        <p>
-
-                        </p>
-                    </div>
-                </div>
-                <!-- service two end -->
-                
-                <!-- service three start -->
-                <div class="row mt75">
-                    <div class="col-md-6 animated" data-animation="fadeInLeft" data-animation-delay="100">
-                        <img src="<?= BASEURL; ?>/img/comunity.jpg" alt="website service" class="img-responsive">
-                    </div>
-                    <div class="col-md-5">
-                        
-                        <h3 class="font-size-normal">
-                        Harmony in Unity: A Community Gathering to Celebrate Togetherness
-                        </h3>
-                        
-                        <p class="mt20 animated" data-animation="fadeIn" data-animation-delay="100">
-                        Bersama-sama, mari merayakan kebersamaan dalam "Harmony in Unity," acara comunity gathering yang menghadirkan momen istimewa bagi komunitas kita. Pada tanggal 23 Juli 2023, EFG Event Management dengan bangga mempersembahkan acara yang memadukan keceriaan, kebersamaan, dan semangat kekeluargaan.
-                        </p>
-                        <p>
-
-                        </p>
-                    </div>
-                </div>
-                <!-- service three end -->
+                <?php endforeach; ?>    
                 
             </div><!-- container end -->
         </div><!-- section service end -->
         
-        
-        <!-- Info Area
-        ===================================== -->
-        <!-- <div id="Info-1" class="bg-gray pt30 bb-solid-1">
-            <div class="container">
-                <div class="row">                
-                    <div class="col-md-8 col-md-offset-2 text-center pb35">
-                        <h4>We are here to help you reach success</h4>
-                        <a class="button button-md button-blue hover-ripple-out mr10">Create Event</a>
-                        <a class="button button-md button-pasific hover-ripple-out">Booking Now</a>
-                    </div>                
-                </div>
-            </div>
-        </div> -->
