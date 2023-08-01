@@ -16,7 +16,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-6 pull-right">
                             <p class="text-right">
                                 <a href="#" class="mr20">Privacy Policy</a>
-                                <a href="#" class="mr20">Term of Use</a>
+                                <a href="<?= BASEURL; ?>/Faq" class="mr20">FAQ</a>
                             </p>
                         </div>
                         <!-- footer bottom end -->
