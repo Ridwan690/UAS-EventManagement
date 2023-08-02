@@ -108,6 +108,8 @@ if (session_status() === PHP_SESSION_NONE) {
                         </li>
                         <li class="dropdown"><a href="<?= BASEURL; ?>/event" class="dropdown-toggle color-light">All Event </a>
                         </li>
+                        <li class="dropdown"><a href="<?= BASEURL; ?>/portofolio" class="dropdown-toggle color-light">Portofolio </a>
+                        </li>
                         <li class="dropdown"><a href="<?= BASEURL; ?>/about" class="dropdown-toggle color-light">About </a>
                         </li>
                         <?php if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true): ?>
