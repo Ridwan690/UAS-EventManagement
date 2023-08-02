@@ -3,4 +3,4 @@
 # Anggota Kelompok :
 # Muhamad Ridwan ()
 # Rangga Eka Kusuma Dani (Views Home & About)
-# Ridwan Nurhakim ()
+# Ridwan Nurhakim (FAQ & Portofolio)
