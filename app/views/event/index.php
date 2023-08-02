@@ -23,16 +23,14 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <h1 class="font-size-normal">
-                            <small>Modern Service</small>
-                            We Build Website &amp; App
+                            Kita akan membantu pelaksanaan event anda
                             <small class="heading heading-solid center-block"></small>
                         </h1>
                     </div>
 
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <p class="lead">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt voluptatem. 
+                        Berikut adalah beberapa event yang berhasil kita handle. 
                         </p>
                     </div>
                 </div>
@@ -72,19 +70,3 @@
             </div><!-- container end -->
         </div><!-- section service end -->
         
-
-        <!-- Info Area
-        =====================================-->
-        <div id="info" class="bg-dark2 pt50 pb25">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="<?= BASEURL; ?>/front-assets/assets/img/other/img-other-13.png" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-md-6 mt25">
-                        <h3 class="color-light font-open-sans">More Than 1,200 People Love Our Product.<br>Join with us now.</h3>
-                        <a class="button button-pasific button-md pull-left mt25 hover-ripple-out">Booking Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>      

@@ -113,7 +113,11 @@
                             <small class="color-light">Event Manager terbaik yang pernah ada</small>
                             Apakah kalian ingin membuat event yang meriah dan juga tak terlupakan?
                         </h1>
-                        <a class="button button-md button-pasific hover-ripple-out mt25">Buat Event</a>
+                        <?php if (isset($_SESSION['isLoggedIn']) && $_SESSION['isLoggedIn'] === true): ?>
+                                <a href="<?= BASEURL; ?>/event/create" class="button button-pasific button-lg hover-ripple-out mt50 animated" data-animation="fadeInUp" data-animation-delay="1200">Buat Event</a>
+                            <?php else: ?>
+                                <a href="<?= BASEURL; ?>/auth" class="button button-pasific button-lg hover-ripple-out mt50 animated" data-animation="fadeInUp" data-animation-delay="1200">Buat Event</a>
+                            <?php endif; ?>
                     </div>   
                 </div>
             </div>
@@ -156,20 +160,14 @@
                             <small class="color-primary"><?= $event['venue']; ?></small>
                         </h3>
                         <p class="mt10">
-                            <?php
-                                $dateTime = DateTime::createFromFormat('Y-m-d - H:i:s', $event['date'] . ' - ' . $event['time']);
-                                $formattedDateTime = $dateTime->format('d-F-Y H:i');
-                                echo $formattedDateTime;
-                            ?>
+                        <?php
+                            $dateTime = DateTime::createFromFormat('Y-m-d - H:i:s', $event['date'] . ' - ' . $event['time']);
+                            $formattedDateTime = $dateTime->format('d-F-Y H:i');
+                            echo $formattedDateTime;
+                        ?>
                         </p>
                         <p class="mt20">
                             <?= $event['deskripsi']; ?>
-                        </p>
-                        <p>
-                            <i class="fa fa-wordpress fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-joomla fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-drupal fa-2x color-gray2 mr10"></i>
-                            <i class="fa fa-shopping-basket fa-2x color-gray2 mr10"></i>
                         </p>
                         <p>
                             <a class="button-o button-sm button-primary hover-fade">View Event</a>

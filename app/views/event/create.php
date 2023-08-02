@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row mt20 mb30">
                     <div class="col-md-12 text-center">
-                        <h3 class="color-light text-uppercase animated" data-animation="fadeInUp" data-animation-delay="100">Create Your Event<small class="color-light alpha7">For your bla bla bla</small></h3>
+                        <h3 class="color-light text-uppercase animated" data-animation="fadeInUp" data-animation-delay="100">Create Your Event<small class="color-light alpha7"></small></h3>
                     </div>
                 </div>
             </div>
